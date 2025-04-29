@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="section text-background">
         <div className="pt-2xl pb-xl gap-m grid sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h4 className="text-background mb-2xs">Kontaktinformation</h4>
+            <h4 className="text-background mb-xs">Kontaktinformation</h4>
             <p>
               <span className="font-semibold">Moons</span> <br />
               Adresse navn <br /> XXXX Bynavn
@@ -51,7 +51,7 @@ const Footer = () => {
             </div>
           </div>
           <div>
-            <h4 className="text-background mb-2xs">Ydelser</h4>
+            <h4 className="text-background mb-xs">Ydelser</h4>
             <ul>
               <li>
                 <Link href="saunagus">Saunagus</Link>
@@ -71,7 +71,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-background mb-2xs">Andet</h4>
+            <h4 className="text-background mb-xs">Andet</h4>
             <ul>
               <li>
                 <Link href="om">Om Moons</Link>
@@ -88,7 +88,7 @@ const Footer = () => {
             </ul>
           </div>
           <div>
-            <h4 className="text-background mb-2xs">Sprog</h4>
+            <h4 className="text-background mb-xs">Sprog</h4>
           </div>
         </div>
         <div className="border-green py-2xs border-t">
