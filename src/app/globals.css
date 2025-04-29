@@ -1,54 +1,198 @@
 @import "tailwindcss";
 
+:root {
+  /* colors */
+  --color-background: #faf7f5;
+  --color-foreground: #1a0502;
+  --color-grey: #ededed;
+  --color-dark-grey: #747474;
+  --color-green: #7c8340;
+  --color-dark-green: #3f4521;
+  --color-yellow: #d7be17;
+  --color-light-yellow: #e5d46f;
+
+  --bg-gradient-top-bottom: linear-gradient(
+    360deg,
+    #0000 50.29%,
+    #0000004d 90%
+  );
+  --bg-gradient-left-right: linear-gradient(270deg, #0000 0%, #000000d1 90%);
+  --bg-gradient-bottom-top: linear-gradient(
+    180deg,
+    #1a050200 50%,
+    #1a0502cc 80%
+  );
+
+  /* fonts */
+  /* @link https://utopia.fyi/type/calculator?c=400,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --text-dislay: clamp(
+    2.4883rem,
+    2.0384rem + 1.7998vw,
+    3.4332rem
+  ); /* 39.8131px → 54.9316px */
+  --text-h1: clamp(
+    2.0736rem,
+    1.7531rem + 1.2819vw,
+    2.7466rem
+  ); /* 33.1776px → 43.9453px */
+  --text-h2: clamp(
+    1.728rem,
+    1.5045rem + 0.8938vw,
+    2.1973rem
+  ); /* 27.648px → 35.1563px */
+  --text-h3: clamp(
+    1.44rem,
+    1.2887rem + 0.6054vw,
+    1.7578rem
+  ); /* 23.04px → 28.125px */
+  --text-h4: clamp(
+    1.2rem,
+    1.1018rem + 0.3929vw,
+    1.4063rem
+  ); /* 19.2px → 22.5px */
+  --text-body-lg: clamp(1rem, 0.9405rem + 0.2381vw, 1.125rem); /* 16px → 18px */
+  --text-body: 1rem;
+  --text-caption: 0.875rem;
+
+  /* spacing */
+  --spacing-3xl: clamp(2.5rem, 0.119rem + 9.5238vw, 7.5rem); /* 40px → 120px */
+  --spacing-2xl: clamp(
+    1.875rem,
+    0.9821rem + 3.5714vw,
+    3.75rem
+  ); /* 30px → 60px */
+  --spacing-xl: clamp(1.5rem, 0.7857rem + 2.8571vw, 3rem); /* 24px → 48px */
+  --spacing-l: clamp(1.5rem, 1.0238rem + 1.9048vw, 2.5rem); /* 24px → 40px */
+  --spacing-m: clamp(1.25rem, 0.8929rem + 1.4286vw, 2rem); /* 20px → 32px */
+  --spacing-s: clamp(1.25rem, 1.131rem + 0.4762vw, 1.5rem); /* 20px → 24px */
+  --spacing-xs: 1rem;
+  --spacing-2xs: 0.5rem;
+
+  /* layout */
+  --content-width: 1200px;
+  --max-content-width: calc(100vw - (var(--spacing-m) * 2));
+}
+
 @theme inline {
   /* colors */
-  --background: #faf7f5;
-  --foreground: #1a0502;
-  --grey: #ededed;
-  --dark-grey: #747474;
-  --green: #7c8340;
-  --dark-green: #3f4521;
-  --yellow: #d7be17;
-  --light-yellow: #e5d46f;
-  --red: #a92411;
-
-  --gradient-top-bottom: linear-gradient(360deg, rgba(0, 0, 0, 0) 80.29%, rgba(0, 0, 0, 0.3) 98.87%);
-  --gradient-left-right: linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 90%);
-  --gradient-bottom-top: linear-gradient(180deg, rgba(26, 5, 2, 0) 50%, rgba(26, 5, 2, 0.8) 80%);
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-grey: var(--color-grey);
+  --color-dark-grey: var(--color-dark-grey);
+  --color-green: var(--color-green);
+  --color-dark-green: var(--color-dark-green);
+  --color-yellow: var(--color-yellow);
+  --color-light-yellow: var(--color-light-yellow);
 
   /* borders */
-  --button-radius: 6px;
-  --small-image-radius: 10px;
-  --image-radius: 16px;
-  --round-image-radius: 100%;
+  --radius-button: 6px; /* rounded-md */
+  --radius-small-image: 10px; /* rounded-lg */
+  --radius-image: 16px; /* rounded-2xl */
 
   /* fonts */
   --font-h: var(--font-playfair-display);
   --font-p: var(--font-lato);
   --font-button: var(--font-lato);
 
-  --dislay: 56px;
-  --h1: 40px;
-  --h2: 30px;
-  --h3: 26px;
-  --h4: 22px;
-  --body-lg: 18px;
-  --body: 16px;
-  --caption: 14px;
+  --text-dislay: var(--text-display);
+  --text-h1: var(--text-h1);
+  --text-h2: var(--text-h2);
+  --text-h3: var(--text-h3);
+  --text-h4: var(--text-h4);
+  --text-body-lg: var(--text-body-lg);
+  --text-body: var(--text-body);
+  --text-caption: var(--text-caption);
 
   /* spacing */
-  --gap-3xl: 120px;
-  --gap-2xl: 60px;
-  --gap-xl: 48px;
-  --gap-l: 40px;
-  --gap-m: 32px;
-  --gap-s: 24px;
-  --gap-xs: 16px;
-  --gap-2xs: 8px;
+  --spacing-3xl: var(--spacing-3xl);
+  --spacing-2xl: var(--spacing-2xl);
+  --spacing-xl: var(--spacing-xl);
+  --spacing-l: var(--spacing-l);
+  --spacing-m: var(--spacing-m);
+  --spacing-s: var(--spacing-s);
+  --spacing-xs: var(--spacing-xs);
+  --spacing-2xs: var(--spacing-2xs);
+
+  --spacing-content: var(--content-width);
+  --spacing-max-content: var(--max-content-width);
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-h text-dark-green leading-[1.2];
+  }
+
+  h1 {
+    @apply text-h1;
+  }
+
+  h2 {
+    @apply text-h2;
+  }
+
+  h3 {
+    @apply text-h3;
+  }
+
+  h4 {
+    @apply text-h4;
+  }
+
+  body {
+    @apply bg-background;
+  }
+
+  p,
+  a,
+  li,
+  div {
+    @apply font-p text-body;
+  }
+
+  p + p {
+    @apply mt-xs;
+  }
+
+  footer p,
+  footer a,
+  footer div {
+    @apply text-caption;
+  }
+
+  footer a {
+    @apply hover:underline;
+  }
+
+  main a:not(.button) {
+    @apply font-semibold hover:underline;
+  }
+}
+
+@layer components {
+  .button {
+    @apply text-body text-background bg-dark-green border-dark-green hover:text-dark-green rounded-md border uppercase tracking-wide transition-all hover:bg-transparent;
+  }
+
+  .flex-center {
+    @apply flex items-center justify-between;
+  }
+
+  .section {
+    @apply w-content max-w-max-content mx-auto;
+  }
+
+  .gradient-top-bottom {
+    background-image: var(--bg-gradient-top-bottom);
+  }
+
+  .gradient-left-right {
+    background-image: var(--bg-gradient-left-right);
+  }
+
+  .gradient-bottom-top {
+    background-image: var(--bg-gradient-bottom-top);
+  }
 }
