@@ -2,6 +2,8 @@ import { Playfair_Display, Lato } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
+import FooterCTA from "@/components/common/FooterCTA";
+import Instagram from "@/components/Instagram";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -26,6 +28,8 @@ export default function RootLayout({ children }) {
       <body className={`${playfair.variable} ${lato.variable} antialiased`}>
         <Header />
         {children}
+        <Instagram />
+        <FooterCTA />
         <Footer />
       </body>
     </html>

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import HeaderLink from "./HeaderLink";
@@ -11,8 +11,6 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
-
-  const buttonRef = useRef(null); // Ref for the hamburger button
 
   const handleNavigate = () => {
     setMenuOpen(false); // close menu on navigation change
@@ -94,7 +92,6 @@ const Header = () => {
 
         {/* mobile */}
         <button
-          ref={buttonRef}
           className="z-100 relative flex h-5 w-7 items-center justify-center md:hidden"
           onClick={toggleMenu}
           aria-label="Toggle Menu"

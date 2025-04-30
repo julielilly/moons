@@ -22,6 +22,7 @@
     #1a050200 50%,
     #1a0502cc 80%
   );
+  --bg-gradient-full: linear-gradient(180deg, #1a050200 0%, #1a0502cc 0%);
 
   /* fonts */
   /* @link https://utopia.fyi/type/calculator?c=400,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -169,11 +170,19 @@
   main a:not(.button) {
     @apply font-semibold hover:underline;
   }
+
+  section {
+    @apply my-2xl;
+  }
 }
 
 @layer components {
   .button {
-    @apply text-body text-background bg-dark-green border-dark-green hover:text-dark-green rounded-md border uppercase tracking-wide transition-all hover:bg-transparent;
+    @apply sm:text-body text-caption text-background bg-dark-green border-dark-green hover:text-dark-green py-2xs px-l rounded-md border uppercase tracking-wide transition-all hover:bg-transparent;
+  }
+
+  .button-link {
+    @apply sm:text-body text-caption md:text-background md:bg-dark-green md:border-dark-green md:hover:text-dark-green md:py-2xs md:px-l border-b uppercase tracking-wide transition-all hover:no-underline md:rounded-md md:border md:hover:bg-transparent;
   }
 
   .flex-center {
@@ -182,6 +191,10 @@
 
   .section {
     @apply w-content max-w-max-content mx-auto;
+  }
+
+  .h2 {
+    @apply font-h text-dark-green text-h3 leading-[1.2];
   }
 
   .gradient-top-bottom {
@@ -194,5 +207,9 @@
 
   .gradient-bottom-top {
     background-image: var(--bg-gradient-bottom-top);
+  }
+
+  .group:hover .gradient-transition {
+    background-image: var(--bg-gradient-full);
   }
 }
