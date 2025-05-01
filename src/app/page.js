@@ -1,19 +1,30 @@
 "use client";
 
+import { useRef } from "react";
+
 import ImageLinkSection from "@/components/ImageLinkSection";
 import PictureTextSection from "@/components/common/PictureTextSection";
 import TopImage from "@/components/common/TopImage";
+import Anmeldelser from "@/components/Anmeldesler";
+
 import Moons from "@/app/assets/profile.jpg";
 import Sunahue from "@/app/assets/hat.jpg";
-import Anmeldelser from "@/components/Anmeldesler";
-import { useRef } from "react";
+import HeroImage from "@/app/assets/top-image.png";
 
 export default function Home() {
   const linkSection = useRef();
 
   return (
     <main>
-      <TopImage linkSection={linkSection} />
+      <TopImage
+        linkSection={linkSection}
+        copy=" Moons skaber rum for dig, der søger en pause fra hverdagen. Gennem
+          saunagus, naturterapi, breathwork og traumeterapi guider vi dig
+          nænsomt hjem i dig selv."
+        header="Find ro, balance og nærvær hos Moons"
+        imageName={HeroImage}
+        imageAlt="sauna"
+      />
       <ImageLinkSection ref={linkSection} />
       <PictureTextSection
         imageName={Moons}

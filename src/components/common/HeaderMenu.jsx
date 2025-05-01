@@ -24,9 +24,9 @@ const HeaderMenu = ({
 
       <nav className="my-l flex h-full flex-col border-t border-gray-200 md:hidden">
         <HeaderLink
-          link="/om-moons"
+          link="/om"
           link_name="Om Moons"
-          submenu={[{ link: "/kontakt", name: "Kontakt" }]}
+          submenu={[{ link: "/om/kontakt", name: "Kontakt" }]}
           menuOpen={menuOpen}
           isOpen={openSubmenuIndex === 0}
           onToggle={() =>
@@ -46,9 +46,9 @@ const HeaderMenu = ({
           link="/terapi"
           link_name="Terapi"
           submenu={[
-            { link: "/traumeterapi", name: "Traumeterapi" },
-            { link: "/naturterapi", name: "Naturterapi" },
-            { link: "/breathwork", name: "Breathwork" },
+            { link: "/terapi/traumeterapi", name: "Traumeterapi" },
+            { link: "/terapi/naturterapi", name: "Naturterapi" },
+            { link: "/terapi/breathwork", name: "Breathwork" },
           ]}
           menuOpen={menuOpen}
           isOpen={openSubmenuIndex === 1}

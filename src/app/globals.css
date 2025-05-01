@@ -26,7 +26,7 @@
 
   /* fonts */
   /* @link https://utopia.fyi/type/calculator?c=400,16,1.2,1240,18,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --text-dislay: clamp(
+  --text-display: clamp(
     2.4883rem,
     2.0384rem + 1.7998vw,
     3.4332rem
@@ -95,7 +95,7 @@
   --font-p: var(--font-lato);
   --font-button: var(--font-lato);
 
-  --text-dislay: var(--text-display);
+  --text-display: var(--text-display);
   --text-h1: var(--text-h1);
   --text-h2: var(--text-h2);
   --text-h3: var(--text-h3);
@@ -197,6 +197,10 @@
     @apply font-h text-dark-green text-h3 leading-[1.2];
   }
 
+  .ul li {
+    @apply text-body/6 gap-2xs before:border-dark-green flex items-center before:block before:h-2.5 before:w-2.5 before:rounded-full before:border;
+  }
+
   .gradient-top-bottom {
     background-image: var(--bg-gradient-top-bottom);
   }
@@ -211,5 +215,11 @@
 
   .group:hover .gradient-transition {
     background-image: var(--bg-gradient-full);
+  }
+}
+
+@layer utilities {
+  .top-image + section {
+    @apply mt-2xl;
   }
 }

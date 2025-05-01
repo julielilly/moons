@@ -8,7 +8,7 @@ const HeaderLink = ({
   link,
   link_name,
   submenu = [],
-  isScrolled,
+  solidHeader,
   menuOpen,
   isOpen,
   onToggle,
@@ -20,11 +20,12 @@ const HeaderLink = ({
   const currentPage = pathname === link; // checks the parent link
   const currentPageParent = submenu.some((item) => item.link === pathname); // checks if the submenu array contains the current pathname
 
-  const sharedClasses = `${isScrolled || menuOpen ? "text-foreground" : "text-background"} 
-  text-body-lg md:after:bg-dark-green after:mt-2xs after:ml-[-4px] after:mr-[-6px] 
+  const sharedClasses = `${solidHeader || menuOpen ? "text-foreground" : "text-background"} 
+  text-body-lg  after:mt-2xs after:ml-[-4px] after:mr-[-6px] 
   after:h-[1.5px] after:w-0 after:transition-all after:duration-300 after:ease-out 
   ${menuOpen ? "px-m py-2xs block border-b border-gray-200 after:hidden" : "md:after:block group-hover:after:w-[120%]"}
-  ${currentPage || currentPageParent ? "after:w-[120%] bg-green/30 md:bg-transparent" : ""}`;
+  ${currentPage || currentPageParent ? "after:w-[120%] bg-green/30 md:bg-transparent" : ""}
+  ${solidHeader ? "md:after:bg-dark-green" : "md:after:bg-green"}`;
 
   const sharedClassSubMenu = `
   ${menuOpen ? "px-8 border-t border-gray-200" : "md:pr-8 md:pl-4"}
