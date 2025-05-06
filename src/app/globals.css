@@ -123,7 +123,7 @@
   h2,
   h3,
   h4 {
-    @apply font-h text-dark-green leading-[1.2];
+    @apply font-h text-dark-green leading-[1.2] tracking-[0.6px];
   }
 
   h1 {
@@ -143,7 +143,7 @@
   }
 
   body {
-    @apply bg-background;
+    @apply bg-background text-foreground;
   }
 
   p,
@@ -201,6 +201,10 @@
     @apply text-body/6 gap-2xs before:border-dark-green flex items-center before:block before:h-2.5 before:w-2.5 before:rounded-full before:border;
   }
 
+  .shopifyHtml p + p {
+    @apply mt-2xs;
+  }
+
   .gradient-top-bottom {
     background-image: var(--bg-gradient-top-bottom);
   }
@@ -211,6 +215,10 @@
 
   .gradient-bottom-top {
     background-image: var(--bg-gradient-bottom-top);
+  }
+
+  .gradient-full {
+    background-image: var(--bg-gradient-full);
   }
 
   .group:hover .gradient-transition {

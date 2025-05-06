@@ -42,12 +42,12 @@ function Accordion({ items }) {
               </svg>
             </button>
 
-            <p
-              className={`transition-max-height duration-400 overflow-hidden ease-linear ${isOpen ? "pb-2xs max-h-[90px] md:max-h-[135px] lg:max-h-[110px] xl:max-h-[90px]" : "max-h-0"}`}
+            <div
+              className={`transition-max-height duration-400 overflow-hidden ease-linear ${isOpen ? "pb-2xs max-h-[150px] md:max-h-[150px] lg:max-h-[110px] xl:max-h-[90px]" : "max-h-0"}`}
               id={id}
             >
               {answer}
-            </p>
+            </div>
           </li>
         );
       })}

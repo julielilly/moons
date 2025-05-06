@@ -4,6 +4,7 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import FooterCTA from "@/components/common/FooterCTA";
 import Instagram from "@/components/Instagram";
+import Cart from "@/components/Cart";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
         <Instagram />
         <FooterCTA />
         <Footer />
+        <Cart />
       </body>
     </html>
   );
