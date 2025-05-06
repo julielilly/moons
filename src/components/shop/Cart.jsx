@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 
 import { useCartStore } from "@/lib/store/cartStore";
-import CheckoutButton from "./CheckoutButton";
+import CheckoutButton from "@/components/shop/CheckoutButton";
 
 export default function Cart() {
   const cart = useCartStore((state) => state.cart);

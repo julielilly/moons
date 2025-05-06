@@ -1,7 +1,7 @@
 import { shopifyClient } from "@/lib/shopify";
 import { PRODUCTS_QUERY } from "@/lib/queries";
 
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/shop/ProductCard";
 
 const ShopInspiration = async () => {
   const data = await shopifyClient.request(PRODUCTS_QUERY); // runs the GraphQL query using the Shopify client
