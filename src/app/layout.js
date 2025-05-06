@@ -4,7 +4,7 @@ import Header from "@/components/common/Header";
 import Footer from "@/components/common/Footer";
 import FooterCTA from "@/components/common/FooterCTA";
 import Instagram from "@/components/Instagram";
-import Cart from "@/components/Cart";
+import Cart from "@/components/shop/Cart";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",

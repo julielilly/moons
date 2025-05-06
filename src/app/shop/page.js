@@ -3,7 +3,7 @@ import { PRODUCTS_QUERY } from "@/lib/queries";
 
 import TopImage from "@/components/common/TopImage";
 import HeroImage from "@/app/assets/hat-top.png";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/shop/ProductCard";
 
 export default async function ShopPage() {
   const data = await shopifyClient.request(PRODUCTS_QUERY); // runs the GraphQL query using the Shopify client

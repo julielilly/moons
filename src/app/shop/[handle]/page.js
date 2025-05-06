@@ -2,10 +2,10 @@ import { shopifyClient } from "@/lib/shopify";
 import { SINGLE_PRODUCT_QUERY } from "@/lib/queries";
 
 import Link from "next/link";
-import AddToCart from "@/components/AddToCart";
+import AddToCart from "@/components/shop/AddToCart";
 import Accordion from "@/components/common/Accordion";
-import ShopInspiration from "@/components/ShopInspiration";
-import ProductImage from "@/components/ProductImage";
+import ShopInspiration from "@/components/shop/ShopInspiration";
+import ProductImage from "@/components/shop/ProductImage";
 
 const Page = async ({ params }) => {
   const { handle } = await params;
