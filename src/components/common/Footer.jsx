@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer className="bg-dark-green">
       <div className="section text-background">
-        <div className="pt-2xl pb-xl gap-m grid sm:grid-cols-2 lg:grid-cols-4">
+        <div className="pt-2xl pb-xl gap-m grid sm:grid-cols-3">
           <div>
             <h4 className="text-background mb-xs">Kontaktinformation</h4>
             <p>
@@ -86,9 +86,6 @@ const Footer = () => {
                 <Link href="politik">Politikker og betingelser</Link>
               </li>
             </ul>
-          </div>
-          <div>
-            <h4 className="text-background mb-xs">Sprog</h4>
           </div>
         </div>
         <div className="border-green py-2xs border-t">
