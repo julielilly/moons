@@ -4,7 +4,14 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 
-const TopImage = ({ linkSection, copy, header, imageName, imageAlt }) => {
+const TopImage = ({
+  linkSection,
+  copy,
+  header,
+  imageName,
+  imageAlt,
+  children,
+}) => {
   const pathname = usePathname();
   const isFrontPage = pathname === "/";
 
@@ -51,6 +58,14 @@ const TopImage = ({ linkSection, copy, header, imageName, imageAlt }) => {
         >
           {copy}
         </p>
+
+        {children && (
+          <p
+            className={`text-background text-body-lg ${isFrontPage ? "max-w-120" : "max-w-150"} -mt-2xs my-s`}
+          >
+            {children}
+          </p>
+        )}
 
         {isFrontPage && (
           <Link
