@@ -12,6 +12,7 @@ export default function Home() {
 
   return (
     <main>
+      <title>Terapi - Moons by Mogens Gyldenløve</title>
       <TopImage
         linkSection={linkSection}
         header="Terapi hos Moons – Et trygt rum til at finde hjem i dig selv"

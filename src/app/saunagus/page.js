@@ -46,6 +46,7 @@ export default function Home() {
 
   return (
     <main>
+      <title>Saunagus - Moons by Mogens Gyldenløve</title>
       <TopImage
         copy="En sanselig saunagus hos Moons er mere end varme og dufte. Det er et rum, hvor du bliver mødt i stilhed, bevæget i kroppen og forbundet til naturen. Gennem æteriske olier, varme og guidede åndedræt skabes en helhedsoplevelse for både krop og sind."
         header="Giv slip – og lad gusen guide dig til ro"

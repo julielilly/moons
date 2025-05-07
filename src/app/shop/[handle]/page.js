@@ -50,6 +50,7 @@ const Page = async ({ params }) => {
 
   return (
     <main className="pt-25">
+      <title>Shop - Moons by Mogens Gyldenløve</title>
       {/* skal være header height */}
       <section className="section mt-2xl">
         <div className="text-dark-grey mb-xs lowercase">

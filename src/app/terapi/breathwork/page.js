@@ -12,6 +12,7 @@ import Moons from "@/app/assets/profile.jpg";
 export default function Home() {
   return (
     <main>
+      <title>Breathwork - Moons by Mogens Gyldenløve</title>
       <TopImage
         header="Træk vejret dybt – og mød dig selv"
         copy="Vejrtrækning er mere end blot noget, vi gør automatisk. Gennem guidet breathwork får du adgang til dybere lag af dig selv – følelsesmæssigt, mentalt og fysisk. Hos Moons foregår breathwork med respekt og nærvær."

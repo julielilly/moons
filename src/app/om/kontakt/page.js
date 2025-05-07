@@ -8,6 +8,7 @@ import Link from "next/link";
 export default function Page() {
   return (
     <main>
+      <title>Kontakt - Moons by Mogens Gyldenløve</title>
       <div className="section md:pt-3xl gap-m md:gap-2xl md:gap-y-m grid pt-20 md:grid-cols-2">
         <h1 className="mt-xs md:col-span-2">Kom i kontakt med Moons</h1>
         <div>

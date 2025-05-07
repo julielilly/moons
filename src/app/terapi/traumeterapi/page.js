@@ -11,6 +11,7 @@ import Moons from "@/app/assets/profile.jpg";
 export default function Home() {
   return (
     <main>
+      <title>Traumeterapi - Moons by Mogens Gyldenløve</title>
       <TopImage
         header="Et trygt rum – til at hele i dit eget tempo"
         copy="Traumeterapi hos Moons tager udgangspunkt i kroppen og nervesystemet. Det handler ikke om at genfortælle hele historien, men om at finde tryghed, kontakt og balance – ét skridt ad gangen."

@@ -12,6 +12,7 @@ import Moons from "@/app/assets/profile.jpg";
 export default function Home() {
   return (
     <main>
+      <title>Naturterapi - Moons by Mogens Gyldenløve</title>
       <TopImage
         header="Genforbind dig med naturen – og med dig selv"
         copy="Naturterapi hos Moons foregår i det fri – i skov, ved vand eller på åbne enge. Her skaber vi et rum, hvor stilhed, samtale og sanselighed får lov at arbejde sammen. Det handler ikke om at “løse noget”, men om at være til stede – med det, der er."

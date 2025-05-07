@@ -12,6 +12,7 @@ import Profile from "@/app/assets/profile-2.jpg";
 export default function Page() {
   return (
     <main>
+      <title>Om Moons - Moons by Mogens Gyldenløve</title>
       <TopImage
         header="Moons – Et sted for nærvær, ro og transformation"
         copy="Skabt af Mogens Gyldenløve – gusmester, terapeut og naturmenneske.
