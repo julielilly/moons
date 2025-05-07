@@ -21,7 +21,7 @@ const ImageLinkSection = forwardRef((props, ref) => {
   const svgStyling = "duration-400 transition-all group-hover:-mr-0.5";
 
   return (
-    <section className="section" ref={ref}>
+    <section className={`section ${showAll ? "front-section" : ""}`} ref={ref}>
       <SectionHeading
         heading="Oplev veje til dybere balance"
         copy="Hos Moons finder du en række holistiske tilbud, der alle har ét fælles mål: at støtte dig i at skabe ro, forankring og fornyet kontakt til din krop og sjæl."

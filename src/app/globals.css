@@ -230,4 +230,8 @@
   .top-image + section {
     @apply mt-2xl;
   }
+
+  .top-image + .front-section {
+    @apply pt-2xl mt-0;
+  }
 }

@@ -1,8 +1,10 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
+import useLayoutStore from "@/lib/store/layoutStore";
 
 const TopImage = ({
   linkSection,
@@ -14,12 +16,13 @@ const TopImage = ({
 }) => {
   const pathname = usePathname();
   const isFrontPage = pathname === "/";
+  const headerHeight = useLayoutStore((state) => state.headerHeight);
 
   const scrollDown = () => {
     const linkSectionTop = linkSection.current.offsetTop;
     console.log("linkSectionTop", linkSectionTop);
     window.scrollTo({
-      top: linkSectionTop - 80 - 60,
+      top: linkSectionTop - headerHeight,
       behavior: "smooth",
     });
   };
@@ -38,12 +41,12 @@ const TopImage = ({
       <div className="gradient-top-bottom absolute h-full w-full"></div>
 
       <div
-        className={`section py-3xl relative col-span-full row-span-full flex flex-col justify-center ${!isFrontPage ? "pb-xl" : ""}`}
+        className={`section py-3xl pt-15 sm:pt-3xl relative col-span-full row-span-full flex flex-col justify-center ${!isFrontPage ? "pb-xl" : ""}`}
       >
         <h1
           className={`text-background pt-m ${isFrontPage ? "text-display max-w-180" : ""}`}
         >
-          {/* breaks the sentence if it contains a dash */}
+          {/* splits the sentence if it contains a dash */}
           {header.includes("–") ? (
             <>
               {header.split("–")[0].trim()}

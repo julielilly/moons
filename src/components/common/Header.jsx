@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
+import useLayoutStore from "@/lib/store/layoutStore";
 
 import Image from "next/image";
 import HeaderLink from "./HeaderLink";
@@ -14,6 +15,9 @@ const Header = () => {
   const [openSubmenuIndex, setOpenSubmenuIndex] = useState(null);
   const [pageHasTopImage, setPageHasTopImage] = useState(true);
   const pathname = usePathname();
+  const setHeaderHeight = useLayoutStore((state) => state.setHeaderHeight);
+  const headerHeight = useLayoutStore((state) => state.headerHeight);
+  const headerRef = useRef(null);
 
   const solidHeader = isScrolled || !pageHasTopImage;
 
@@ -25,6 +29,29 @@ const Header = () => {
     setMenuOpen(!menuOpen); // Toggle the menu state
     openSubmenuIndex >= 0 && setOpenSubmenuIndex(!openSubmenuIndex); //closes submenu id open (if has index)
   };
+
+  // update headerHeight
+  useEffect(() => {
+    const updateHeight = () => {
+      if (headerRef.current) {
+        setHeaderHeight(headerRef.current.offsetHeight);
+      }
+    };
+
+    updateHeight();
+
+    window.addEventListener("resize", updateHeight);
+    window.addEventListener("scroll", updateHeight);
+
+    return () => {
+      window.removeEventListener("resize", updateHeight);
+      window.removeEventListener("scroll", updateHeight);
+    };
+  }, []);
+
+  useEffect(() => {
+    console.log("headerHeight", headerHeight);
+  }, [headerHeight]);
 
   useEffect(() => {
     // Detect the scroll event to toggle the background
@@ -51,6 +78,7 @@ const Header = () => {
 
   return (
     <header
+      ref={headerRef}
       className={`z-100 fixed w-full ${solidHeader ? "bg-grey shadow" : ""} transition-all`}
     >
       <div className="section flex-center duration-250 py-4 transition-all">

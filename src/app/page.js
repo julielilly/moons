@@ -16,6 +16,7 @@ export default function Home() {
 
   return (
     <main>
+      <title>Forside - Moons by Mogens Gyldenløve</title>
       <TopImage
         linkSection={linkSection}
         copy=" Moons skaber rum for dig, der søger en pause fra hverdagen. Gennem
