@@ -167,7 +167,7 @@
     @apply hover:underline;
   }
 
-  main a:not(.button) {
+  main a:not(.button):not(.button-link) {
     @apply font-semibold hover:underline;
   }
 
@@ -203,6 +203,23 @@
 
   .shopifyHtml p + p {
     @apply mt-2xs;
+  }
+
+  .politik h2 {
+    @apply mt-s mb-2xs;
+  }
+
+  .politik ul {
+    @apply my-2xs ml-4 list-disc;
+  }
+
+  .politik li {
+    @apply my-1;
+  }
+
+  .politik p,
+  .politik li {
+    @apply max-w-[75ch];
   }
 
   .gradient-top-bottom {

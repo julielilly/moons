@@ -4,13 +4,15 @@ import Image from "next/image";
 
 import ContactForm from "@/components/common/ContactForm";
 import Link from "next/link";
+import useLayoutStore from "@/lib/store/layoutStore";
 
 export default function Page() {
+  const headerHeight = useLayoutStore((state) => state.headerHeight);
   return (
-    <main>
+    <main style={{ paddingTop: headerHeight }}>
       <title>Kontakt - Moons by Mogens Gyldenløve</title>
-      <div className="section md:pt-3xl gap-m md:gap-2xl md:gap-y-m grid pt-20 md:grid-cols-2">
-        <h1 className="mt-xs md:col-span-2">Kom i kontakt med Moons</h1>
+      <div className="section gap-m md:gap-2xl md:gap-y-m pt-2xl grid md:grid-cols-2">
+        <h1 className="md:col-span-2">Kom i kontakt med Moons</h1>
         <div>
           <p>
             Har du spørgsmål, tanker eller er i tvivl om, hvilken vej der passer

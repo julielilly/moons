@@ -1,7 +1,9 @@
 "use client";
 import { useState } from "react";
+import useLayoutStore from "@/lib/store/layoutStore";
 
 const ProductImage = ({ imageUrl, alt }) => {
+  const headerHeight = useLayoutStore((state) => state.headerHeight);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => setIsModalOpen(true);
@@ -23,7 +25,11 @@ const ProductImage = ({ imageUrl, alt }) => {
         >
           {/* e.stopPropagation() stops click from reaching parent ie triggering the close */}
           {/*header-height top-7 */}
-          <div className="relative top-7" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative"
+            style={{ marginTop: headerHeight }}
+            onClick={(e) => e.stopPropagation()}
+          >
             <button
               onClick={closeModal}
               className="bg-foreground text-background absolute right-2 top-2 flex h-9 w-9 cursor-pointer items-center justify-center rounded-full"

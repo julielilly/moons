@@ -5,6 +5,7 @@ import Footer from "@/components/common/Footer";
 import FooterCTA from "@/components/common/FooterCTA";
 import Instagram from "@/components/Instagram";
 import Cart from "@/components/shop/Cart";
+import Head from "next/head";
 
 const playfair = Playfair_Display({
   variable: "--font-playfair-display",
@@ -26,7 +27,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="da">
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
       <body className={`${playfair.variable} ${lato.variable} antialiased`}>
         <Header />
         {children}

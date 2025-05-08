@@ -21,15 +21,15 @@ const HeaderLink = ({
   const currentPageParent = submenu.some((item) => item.link === pathname); // checks if the submenu array contains the current pathname
 
   const sharedClasses = `${solidHeader || menuOpen ? "text-foreground" : "text-background"} 
-  text-body-lg  after:mt-2xs after:ml-[-4px] after:mr-[-6px] 
-  after:h-[1.5px] after:w-0 after:transition-all after:duration-300 after:ease-out 
+  text-body-lg after:h-2xs after:ml-[-4px] after:mr-[-6px] 
+  after:border-b-[2px] after:w-0 after:transition-all after:duration-300 after:ease-out 
   ${menuOpen ? "px-m py-2xs block border-b border-gray-200 after:hidden" : "md:after:block group-hover:after:w-[120%]"}
   ${currentPage || currentPageParent ? "after:w-[120%] bg-green/30 md:bg-transparent" : ""}
-  ${solidHeader ? "md:after:bg-dark-green" : "md:after:bg-green"}`;
+  ${solidHeader ? "md:after:border-b-dark-green" : "md:after:border-b-green"}`;
 
   const sharedClassSubMenu = `
   ${menuOpen ? "px-8 border-t border-gray-200" : "md:pr-8 md:pl-4"}
-  py-2 text-body-lg text-foreground relative block whitespace-nowrap
+  py-2 text-body-lg text-foreground isolate bofore:z-index[-1] relative block whitespace-nowrap
   before:absolute before:bottom-0 before:left-0 before:top-0 before:w-full
   before:bg-green before:opacity-10 md:before:opacity-20 before:transition-all
   before:duration-300 before:ease-out md:before:w-0 md:hover:before:w-full
@@ -73,19 +73,20 @@ const HeaderLink = ({
       {/* Submenu, only if submenu items exist */}
       {submenu.length > 0 && (
         <div
-          className={`md:-left-xs bg-grey min-w-[135px] overflow-hidden ${
+          className={`md:-left-xs min-w-[135px] overflow-hidden ${solidHeader || menuOpen ? "bg-grey" : "bg-grey/85"} ${
             isOpen && isMobile ? "block" : "hidden md:group-hover:block"
-          } ${!menuOpen ? "absolute shadow" : "border-b border-gray-200"}`}
+          } ${!menuOpen ? "rounded-xs absolute shadow" : "border-b border-gray-200"}`}
         >
           {isMobile && menuOpen && (
             <Link
               href={link}
-              className={sharedClassSubMenu}
+              className={`${sharedClassSubMenu} ${currentPage ? "bg-green/20 md:bg-transparent md:before:w-full md:before:opacity-30" : ""} border-none`}
               onClick={handleNavigate}
             >
               {link_name}
             </Link>
           )}
+
           {submenu.map((item, index) => {
             const currentSubPage = pathname === item.link; // checks the child link
 

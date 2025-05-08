@@ -14,7 +14,7 @@ const Footer = () => {
             </p>
             <p>
               <a href="tel:+4500000000">Tlf:00 00 00 00</a> <br />
-              <a href="mailto:mail@mail.com">Mail: mail@mail.com</a>
+              <a href="mailto:mail@mail.com">Email: mail@mail.com</a>
             </p>
             <p>CVR: 00000000</p>
             <div className="gap-2xs mt-s flex">
@@ -54,19 +54,19 @@ const Footer = () => {
             <h4 className="text-background mb-xs">Ydelser</h4>
             <ul>
               <li>
-                <Link href="saunagus">Saunagus</Link>
+                <Link href="/saunagus">Saunagus</Link>
               </li>
               <li>
-                <Link href="traumeterapi">Traumeterapi</Link>
+                <Link href="/terapi/traumeterapi">Traumeterapi</Link>
               </li>
               <li>
-                <Link href="naturterapi">Naturterapi</Link>
+                <Link href="/terapi/naturterapi">Naturterapi</Link>
               </li>
               <li>
-                <Link href="breathwork">Breathwork</Link>
+                <Link href="/terapi/breathwork">Breathwork</Link>
               </li>
               <li>
-                <Link href="shop">Shop saunahuer</Link>
+                <Link href="/shop">Shop saunahuer</Link>
               </li>
             </ul>
           </div>
@@ -74,24 +74,24 @@ const Footer = () => {
             <h4 className="text-background mb-xs">Andet</h4>
             <ul>
               <li>
-                <Link href="om">Om Moons</Link>
+                <Link href="/om">Om Moons</Link>
               </li>
               <li>
-                <Link href="booking">Bookingkalender</Link>
+                <Link href="/booking">Bookingkalender</Link>
               </li>
               <li>
-                <Link href="kontakt">Kontakt</Link>
+                <Link href="/om/kontakt">Kontakt</Link>
               </li>
               <li>
-                <Link href="politik">Politikker og betingelser</Link>
+                <Link href="/handelspolitik">Handelspolitik</Link>
               </li>
             </ul>
           </div>
         </div>
         <div className="border-green py-2xs border-t">
           <Link href="/cookiepolitik">Cookiepolitik </Link>|
-          <Link href="/persondatapolitik"> Persondatapolitik </Link>|
-          <Link href="/"> www.moons.dk </Link>| Alle rettigheder forbeholdes
+          <Link href="/privatlivspolitik"> Privatlivspolitik </Link>| © 2025
+          Moons | Alle rettigheder forbeholdes
         </div>
       </div>
     </footer>

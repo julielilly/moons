@@ -49,10 +49,10 @@ const Page = async ({ params }) => {
     );
 
   return (
-    <main className="pt-25">
+    <main className="sm:pt-23 pt-15">
       <title>Shop - Moons by Mogens Gyldenløve</title>
       {/* skal være header height */}
-      <section className="section mt-2xl">
+      <section className="section mt-2xl relative z-10">
         <div className="text-dark-grey mb-xs lowercase">
           <Link href="/shop" className="text-foreground font-normal">
             shop
@@ -63,7 +63,7 @@ const Page = async ({ params }) => {
         <div className="gap-2xl grid sm:grid-cols-2">
           {/* header height */}
           <div className="top-18 h-fit sm:sticky">
-            <div className="h-[400px] w-full sm:h-full sm:w-fit">
+            <div className="relative h-[400px] w-full sm:h-full sm:w-fit">
               {/* nyhed */}
               {newProduct && !onSale && (
                 <div className={`${tag} rounded-e-sm`}>Nyhed</div>
