@@ -16,7 +16,6 @@ const Header = () => {
   const [pageHasTopImage, setPageHasTopImage] = useState(true);
   const pathname = usePathname();
   const setHeaderHeight = useLayoutStore((state) => state.setHeaderHeight);
-  const headerHeight = useLayoutStore((state) => state.headerHeight);
   const headerRef = useRef(null);
 
   const solidHeader = isScrolled || !pageHasTopImage;
