@@ -27,8 +27,12 @@ const Header = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen); // Toggle the menu state
-    openSubmenuIndex >= 0 && setOpenSubmenuIndex(!openSubmenuIndex); //closes submenu id open (if has index)
+    openSubmenuIndex >= 0 && setOpenSubmenuIndex(!openSubmenuIndex); // closes submenu id open (if has index)
   };
+
+  useEffect(() => {
+    console.log(headerHeight);
+  });
 
   // update headerHeight
   useEffect(() => {
@@ -48,10 +52,6 @@ const Header = () => {
       window.removeEventListener("scroll", updateHeight);
     };
   }, []);
-
-  useEffect(() => {
-    console.log("headerHeight", headerHeight);
-  }, [headerHeight]);
 
   useEffect(() => {
     // Detect the scroll event to toggle the background
@@ -79,9 +79,9 @@ const Header = () => {
   return (
     <header
       ref={headerRef}
-      className={`z-100 fixed w-full ${solidHeader ? "bg-grey shadow" : ""} transition-all`}
+      className={`z-100 fixed w-full ${solidHeader ? "bg-grey shadow" : ""} transition-all duration-300 ease-in`}
     >
-      <div className="section flex-center duration-250 py-4 transition-all">
+      <div className="section flex-center py-4">
         <Link href="/">
           <Image
             src={solidHeader ? "/logo-dark.svg" : "/logo.svg"}

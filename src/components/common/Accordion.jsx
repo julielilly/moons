@@ -1,8 +1,9 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 function Accordion({ items }) {
   const [openId, setOpenId] = useState(null);
+  const answerRefs = useRef({}); // stores a ref for each answer, keyed by their unique id (used to calculate height)
 
   const handleClick = (id) => {
     setOpenId((prev) => (prev === id ? null : id)); // open the clicked element, or set id to null if it was already open
@@ -11,7 +12,7 @@ function Accordion({ items }) {
   return (
     <ul className="pt-2xs pb-xl w-full">
       {items.map(({ id, question, answer }) => {
-        const isOpen = openId === id;
+        const isOpen = openId === id; // checks if openId and id are equal (returns a boolean)
 
         return (
           <li key={id} className="border-yellow border-b">
@@ -19,7 +20,7 @@ function Accordion({ items }) {
               aria-expanded={isOpen} // for screen readers
               aria-controls={id}
               onClick={() => handleClick(id)}
-              className="text-body-lg flex-center py-2xs w-full"
+              className="text-body-lg flex-center py-2xs w-full cursor-pointer"
             >
               {question}
               <svg
@@ -37,16 +38,22 @@ function Accordion({ items }) {
                   x2="5"
                   y2="9"
                 />
-
                 <line x1="1" y1="5" x2="9" y2="5" />
               </svg>
             </button>
 
             <div
-              className={`transition-max-height duration-400 overflow-hidden ease-linear ${isOpen ? "pb-2xs max-h-[150px] md:max-h-[150px] lg:max-h-[110px] xl:max-h-[90px]" : "max-h-0"}`}
               id={id}
+              ref={(el) => (answerRefs.current[id] = el)} // store the DOM element under its id in a shared object
+              style={{
+                maxHeight: isOpen
+                  ? // .scrollHeight gets the content’s actual height
+                    `${answerRefs.current[id]?.scrollHeight}px`
+                  : "0px",
+              }}
+              className="overflow-hidden transition-[max-height] duration-500 ease-in-out"
             >
-              {answer}
+              <div className="pb-2xs">{answer}</div>
             </div>
           </li>
         );

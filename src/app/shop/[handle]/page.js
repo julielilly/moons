@@ -24,8 +24,6 @@ const Page = async ({ params }) => {
   const onSale = product.variants.edges[0].node.compareAtPrice;
   const soldOut = !product.availableForSale;
 
-  console.log("newProduct", product.createdAt);
-
   const discountPercent = onSale
     ? Math.round(
         ((onSale.amount - product.variants.edges[0].node.price.amount) /
@@ -51,7 +49,7 @@ const Page = async ({ params }) => {
   return (
     <main className="sm:pt-23 pt-15">
       <title>Shop - Moons by Mogens Gyldenløve</title>
-      {/* skal være header height */}
+
       <section className="section mt-2xl relative z-10">
         <div className="text-dark-grey mb-xs lowercase">
           <Link href="/shop" className="text-foreground font-normal">
@@ -61,8 +59,7 @@ const Page = async ({ params }) => {
         </div>
 
         <div className="gap-2xl grid sm:grid-cols-2">
-          {/* header height */}
-          <div className="top-18 h-fit sm:sticky">
+          <div className="top-21 h-fit sm:sticky">
             <div className="relative h-[400px] w-full sm:h-full sm:w-fit">
               {/* nyhed */}
               {newProduct && !onSale && (

@@ -19,9 +19,9 @@ const TopImage = ({
 
   const scrollDown = () => {
     const linkSectionTop = linkSection.current.offsetTop;
-    console.log("linkSectionTop", linkSectionTop);
+
     window.scrollTo({
-      top: linkSectionTop - headerHeight,
+      top: linkSectionTop - headerHeight + 10,
       behavior: "smooth",
     });
   };

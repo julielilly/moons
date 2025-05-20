@@ -30,7 +30,7 @@ const ImageLinkSection = forwardRef((props, ref) => {
         className={`gap-m mt-m grid grid-cols-1 sm:grid-cols-2 ${showAll ? "md:grid-cols-4" : "md:grid-cols-3"} `}
       >
         {showAll && (
-          <Link href="/sauna" className={linkStyling}>
+          <Link href="/saunagus" className={linkStyling}>
             <Image src={Sauna} alt="sauna" className={imageStyling} />
             <div className={overlayStyling}></div>
             <div className={textStyling}>

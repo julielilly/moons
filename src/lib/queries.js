@@ -1,4 +1,4 @@
-// standard GraphQL query to fetch the first 10 products from Shopify
+// standard GraphQL query to fetch the first 50 products from Shopify
 // this is not data - it’s a plain JavaScript template string (string literal) that defines what you’re asking from Shopify
 export const PRODUCTS_QUERY = `
   {

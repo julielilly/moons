@@ -13,9 +13,24 @@ const Anmeldelser = () => {
         />
 
         <div className="mt-m sm:gap-s mb-[90px] grid sm:grid-cols-2 md:grid-cols-3">
-          <Anmeldelse />
-          <Anmeldelse right={true} />
-          <Anmeldelse extraClasses="hidden md:block" />
+          <Anmeldelse
+            copy="En tryg og intuitiv guidning – jeg følte mig virkelig mødt. Det var
+          som at kunne trække vejret helt ned i kroppen igen."
+            anmelder="Anna M."
+            type="breathwork"
+          />
+          <Anmeldelse
+            right={true}
+            copy="En vildt sanselig oplevelse. Kombinationen af varme, dufte og guidning var ren healing."
+            anmelder="Peter L."
+            type="Saunagus"
+          />
+          <Anmeldelse
+            extraClasses="hidden md:block"
+            copy="Hos Moons fandt jeg ord og rum for noget, jeg længe har båret alene. Det var en af de mest trygge og nærværende oplevelser, jeg har haft."
+            anmelder="Sofia K."
+            type="Traumeterapi"
+          />
         </div>
       </div>
 
