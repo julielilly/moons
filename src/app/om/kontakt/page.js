@@ -25,7 +25,7 @@ export default function Page() {
           </p>
           <p className="font-semibold">
             Ønsker du at booke en session, så brug venligst
-            <Link href="booking"> bookingsiden</Link>, hvor du kan finde alle
+            <Link href="/booking"> bookingsiden</Link>, hvor du kan finde alle
             tilgængelige tider og ydelser.
           </p>
           <p>
