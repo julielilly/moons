@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const ProductCard = ({ product }) => {
   const newProduct =
@@ -40,9 +41,11 @@ const ProductCard = ({ product }) => {
       {soldOut && <div className={`${tag} right-0 rounded-s-sm`}>Udsolgt</div>}
 
       <div className="image-container aspect-4/5 mb-2 w-full overflow-hidden rounded-lg">
-        <img
+        <Image
           src={product.images.edges[0]?.node.url}
           alt={product.title}
+          width={300}
+          height={300}
           className="h-full w-full object-cover"
         />
       </div>

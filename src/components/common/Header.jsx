@@ -30,10 +30,6 @@ const Header = () => {
     openSubmenuIndex >= 0 && setOpenSubmenuIndex(!openSubmenuIndex); // closes submenu id open (if has index)
   };
 
-  useEffect(() => {
-    console.log(headerHeight);
-  });
-
   // update headerHeight
   useEffect(() => {
     const updateHeight = () => {

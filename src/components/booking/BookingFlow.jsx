@@ -20,10 +20,6 @@ const BookingFlow = () => {
   }, []);
 
   useEffect(() => {
-    console.log("eventTypes:", eventTypes);
-  }, [eventTypes]);
-
-  useEffect(() => {
     // load Calendly script when event is selected
     if (selectedEvent) {
       const script = document.createElement("script");

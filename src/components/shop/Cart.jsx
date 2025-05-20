@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 
 import { useCartStore } from "@/lib/store/cartStore";
 import CheckoutButton from "@/components/shop/CheckoutButton";
@@ -87,9 +88,11 @@ export default function Cart() {
             <div className="max-h-[75svh] overflow-y-scroll">
               {cart.map((item) => (
                 <div key={item.id} className="mb-xs gap-2xs flex">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.title}
+                    width={100}
+                    height={100}
                     className="aspect-square w-[30%] rounded-lg object-cover"
                   />
 

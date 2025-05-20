@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import useLayoutStore from "@/lib/store/layoutStore";
+import Image from "next/image";
 
 const ProductImage = ({ imageUrl, alt }) => {
   const headerHeight = useLayoutStore((state) => state.headerHeight);
@@ -11,9 +12,11 @@ const ProductImage = ({ imageUrl, alt }) => {
 
   return (
     <>
-      <img
+      <Image
         src={imageUrl}
         alt={alt}
+        width={700}
+        height={700}
         onClick={openModal}
         className="h-full w-full cursor-pointer rounded-2xl object-cover sm:h-auto sm:object-contain"
       />

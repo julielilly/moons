@@ -31,7 +31,13 @@ const ImageLinkSection = forwardRef((props, ref) => {
       >
         {showAll && (
           <Link href="/saunagus" className={linkStyling}>
-            <Image src={Sauna} alt="sauna" className={imageStyling} />
+            <Image
+              src={Sauna}
+              alt="sauna"
+              className={imageStyling}
+              height={370}
+              width={300}
+            />
             <div className={overlayStyling}></div>
             <div className={textStyling}>
               Saunagus
@@ -47,7 +53,13 @@ const ImageLinkSection = forwardRef((props, ref) => {
         )}
 
         <Link href="/terapi/traumeterapi" className={linkStyling}>
-          <Image src={Incense} alt="incense" className={imageStyling} />
+          <Image
+            src={Incense}
+            alt="incense"
+            className={imageStyling}
+            height={370}
+            width={300}
+          />
           <div className={overlayStyling}></div>
           <div className={textStyling}>
             Traumeterapi
@@ -61,7 +73,13 @@ const ImageLinkSection = forwardRef((props, ref) => {
           </div>
         </Link>
         <Link href="/terapi/naturterapi" className={linkStyling}>
-          <Image src={Forrest} alt="skov" className={imageStyling} />
+          <Image
+            src={Forrest}
+            alt="skov"
+            className={imageStyling}
+            height={370}
+            width={300}
+          />
           <div className={overlayStyling}></div>
           <div className={textStyling}>
             Naturterapi
@@ -75,7 +93,13 @@ const ImageLinkSection = forwardRef((props, ref) => {
           </div>
         </Link>
         <Link href="/terapi/breathwork" className={linkStyling}>
-          <Image src={Oils} alt="olier" className={imageStyling} />
+          <Image
+            src={Oils}
+            alt="olier"
+            className={imageStyling}
+            height={370}
+            width={300}
+          />
           <div className={overlayStyling}></div>
           <div className={textStyling}>
             Breathwork

@@ -32,6 +32,8 @@ const TopImage = ({
         <Image
           src={imageName}
           alt={imageAlt}
+          height={500}
+          width={500}
           className={`${isFrontPage ? "h-[80svh]" : "h-[50svh]"} min-h-full w-full object-cover`}
         />
       </div>

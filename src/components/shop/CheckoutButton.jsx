@@ -6,7 +6,6 @@ export default function CheckoutButton() {
   const cart = useCartStore((state) => state.cart);
 
   const handleCheckout = async () => {
-    // console.log("Initiating checkout with cart:", cart);
     if (cart.length === 0) return;
 
     // transforms the cart items into the format Shopify expects

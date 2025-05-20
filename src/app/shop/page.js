@@ -9,7 +9,6 @@ export default async function ShopPage() {
   const data = await shopifyClient.request(PRODUCTS_QUERY); // runs the GraphQL query using the Shopify client
   const products = data.products.edges.map((edge) => edge.node); // extract the product nodes from the edges array
 
-  console.log(products);
   return (
     <main>
       <title>Shop - Moons by Mogens Gyldenløve</title>

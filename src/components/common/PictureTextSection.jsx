@@ -41,6 +41,8 @@ const PictureTextSection = ({
         <Image
           src={imageName}
           alt={imageAlt}
+          height={350}
+          width={350}
           className="h-full w-full object-cover object-bottom"
         />
       </div>
