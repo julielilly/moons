@@ -17,7 +17,7 @@ const BookingType = ({ event, setSelectedEvent }) => {
 
   return (
     <li className="bg-grey p-m flex flex-col items-start rounded-lg">
-      <h4 className="mb-xs">{event.name}</h4>
+      <h2 className="mb-xs text-h4">{event.name}</h2>
 
       <p className="flex-center gap-xs">
         <svg

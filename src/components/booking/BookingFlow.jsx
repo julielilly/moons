@@ -45,7 +45,7 @@ const BookingFlow = () => {
             />
           ))}
           <li className="border-dark-green p-m flex flex-col items-start rounded-lg border">
-            <h4 className="mb-xs">Er du i tvivl?</h4>
+            <h2 className="mb-xs text-h4">Er du i tvivl?</h2>
 
             <p>Vi hjælper dig gerne med at finde det rigtige forløb.</p>
             <p className="mb-l">
